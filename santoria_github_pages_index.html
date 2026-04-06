@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Santoria Podcast: historias reales, experiencias extremas y conversaciones que generan impacto." />
+  <meta name="theme-color" content="#090909" />
+  <title>Santoria Podcast</title>
+
+  <!-- Tailwind por CDN: ideal para una versión estática en GitHub Pages -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.7; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.8s ease-out both; }
+    .float-slow { animation: floatSlow 6s ease-in-out infinite; }
+    .pulse-glow { animation: pulseGlow 5s ease-in-out infinite; }
+  </style>
+</head>
+<body class="min-h-screen bg-[#090909] text-white selection:bg-orange-500/30 selection:text-white">
+  <!-- Fondo decorativo con brillos suaves -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-orange-500/10 blur-3xl pulse-glow"></div>
+    <div class="absolute top-[28%] left-[8%] h-44 w-44 rounded-full bg-orange-600/10 blur-3xl float-slow"></div>
+    <div class="absolute bottom-[14%] right-[8%] h-52 w-52 rounded-full bg-orange-400/10 blur-3xl pulse-glow"></div>
+  </div>
+
+  <!-- Navbar sticky -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-[#090909]/85 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="#inicio" class="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.25em] text-white/90">
+        <span class="inline-flex h-3 w-3 rounded-full bg-orange-500 shadow-[0_0_18px_rgba(249,115,22,0.8)]"></span>
+        Santoria Podcast
+      </a>
+
+      <nav class="hidden items-center gap-7 lg:flex">
+        <a href="#inicio" class="text-sm text-white/70 transition hover:text-white">Inicio</a>
+        <a href="#quienes-somos" class="text-sm text-white/70 transition hover:text-white">Quiénes somos</a>
+        <a href="#proporcionamos" class="text-sm text-white/70 transition hover:text-white">Propuesta</a>
+        <a href="#redes" class="text-sm text-white/70 transition hover:text-white">Redes</a>
+        <a href="#sponsors" class="text-sm text-white/70 transition hover:text-white">Sponsors</a>
+        <a href="#estudio" class="text-sm text-white/70 transition hover:text-white">Estudio</a>
+        <a href="#contacto" class="text-sm text-white/70 transition hover:text-white">Contacto</a>
+      </nav>
+
+      <a
+        href="#contacto"
+        class="rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-300 transition hover:border-orange-400 hover:bg-orange-500/20 hover:text-orange-200"
+      >
+        Contacto
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="relative isolate overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.16),transparent_35%),linear-gradient(to_bottom,rgba(0,0,0,0.35),rgba(0,0,0,0.85))]"></div>
+        <img
+          src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1600&q=80"
+          alt="Estudio de podcast profesional con micrófonos y ambiente cinematográfico"
+          class="h-full w-full object-cover opacity-35"
+        />
+      </div>
+
+      <div class="relative mx-auto grid min-h-[88vh] max-w-7xl items-center gap-10 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+        <div class="fade-up max-w-3xl">
+          <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.25em] text-orange-300 backdrop-blur-sm">
+            Media brand · Podcast · Producción premium
+          </div>
+
+          <h1 class="max-w-4xl text-5xl font-black leading-none tracking-tight text-white sm:text-6xl lg:text-8xl">
+            Santoria <span class="text-orange-500">Podcast</span>
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-white/78 sm:text-xl">
+            Historias reales, experiencias extremas y conversaciones que generan impacto.
+          </p>
+
+          <p class="mt-6 max-w-2xl text-base leading-7 text-white/60">
+            Un entorno audiovisual pensado para construir autoridad, conversación y visibilidad en cada episodio.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#sponsors"
+              class="inline-flex items-center justify-center rounded-full bg-orange-500 px-7 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-orange-400"
+            >
+              Colabora como Sponsor
+            </a>
+            <a
+              href="#estudio"
+              class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:border-orange-400/40 hover:bg-white/10"
+            >
+              Alquila nuestro estudio
+            </a>
+          </div>
+        </div>
+
+        <div class="fade-up lg:justify-self-end">
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-md">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-3xl border border-white/10 bg-black/50 p-5">
+                <p class="text-sm uppercase tracking-[0.2em] text-white/45">Audiencia</p>
+                <p class="mt-3 text-3xl font-black text-white">+55,000</p>
+                <p class="mt-2 text-sm text-white/60">seguidores</p>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-black/50 p-5">
+                <p class="text-sm uppercase tracking-[0.2em] text-white/45">Impacto</p>
+                <p class="mt-3 text-3xl font-black text-white">+15M</p>
+                <p class="mt-2 text-sm text-white/60">visualizaciones</p>
+              </div>
+            </div>
+
+            <div class="mt-4 rounded-3xl border border-orange-500/20 bg-gradient-to-br from-orange-500/12 to-white/5 p-5">
+              <p class="text-sm uppercase tracking-[0.2em] text-orange-300">Producción premium</p>
+              <p class="mt-3 text-lg font-semibold text-white">
+                Conversaciones diseñadas para conectar, retener y escalar marca.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes-somos" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+      <div class="grid items-center gap-14 lg:grid-cols-2">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Quiénes somos</p>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
+            Conversaciones con producción profesional y narrativa con impacto.
+          </h2>
+          <p class="mt-8 text-lg leading-8 text-white/72">
+            Santoria Podcast es un formato de entrevistas y conversación donde exploramos historias reales, experiencias impactantes y temas que generan curiosidad, reflexión y debate.
+          </p>
+          <p class="mt-6 text-base leading-7 text-white/58">
+            Cada episodio está pensado para ofrecer una experiencia audiovisual cuidada, con una puesta en escena seria, creíble y visualmente potente, alineada con una marca media moderna.
+          </p>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-[2rem] bg-orange-500/10 blur-2xl"></div>
+          <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
+            <img
+              src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1400&q=80"
+              alt="Entrevista en estudio de podcast con producción profesional"
+              class="h-[520px] w-full object-cover opacity-85"
+            />
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent p-8">
+              <p class="text-sm uppercase tracking-[0.25em] text-orange-300">Credibilidad · Producción · Presencia</p>
+              <p class="mt-3 max-w-md text-lg font-semibold text-white">
+                Un set preparado para conversaciones que transmiten autoridad y confianza.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPUESTA -->
+    <section id="proporcionamos" class="border-y border-white/8 bg-white/[0.02]">
+      <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Qué te proporcionamos</p>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
+            Un ecosistema de contenido preparado para crecer y convertir.
+          </h2>
+        </div>
+
+        <div class="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div class="group rounded-[1.75rem] border border-white/10 bg-black/40 p-7 transition duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-500/30 bg-orange-500/10 text-xl text-orange-300">◉</div>
+            <h3 class="mt-6 text-2xl font-bold text-white">Formato multiplataforma</h3>
+            <p class="mt-4 text-base leading-7 text-white/60">Contenido adaptado para YouTube, Spotify, TikTok e Instagram con una estrategia pensada para ampliar alcance.</p>
+          </div>
+
+          <div class="group rounded-[1.75rem] border border-white/10 bg-black/40 p-7 transition duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-500/30 bg-orange-500/10 text-xl text-orange-300">◆</div>
+            <h3 class="mt-6 text-2xl font-bold text-white">Integración natural de marca</h3>
+            <p class="mt-4 text-base leading-7 text-white/60">Presencia orgánica y no invasiva para que la audiencia conecte con la marca de forma auténtica.</p>
+          </div>
+
+          <div class="group rounded-[1.75rem] border border-white/10 bg-black/40 p-7 transition duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-500/30 bg-orange-500/10 text-xl text-orange-300">▲</div>
+            <h3 class="mt-6 text-2xl font-bold text-white">Alto engagement y retención</h3>
+            <p class="mt-4 text-base leading-7 text-white/60">Conversaciones diseñadas para mantener la atención y generar recuerdo real en la audiencia.</p>
+          </div>
+
+          <div class="group rounded-[1.75rem] border border-white/10 bg-black/40 p-7 transition duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-500/30 bg-orange-500/10 text-xl text-orange-300">✦</div>
+            <h3 class="mt-6 text-2xl font-bold text-white">Potencial viral mediante clips</h3>
+            <p class="mt-4 text-base leading-7 text-white/60">Cada episodio se transforma en piezas cortas con alto potencial de distribución y descubrimiento.</p>
+          </div>
+
+          <div class="group rounded-[1.75rem] border border-white/10 bg-black/40 p-7 transition duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-500/30 bg-orange-500/10 text-xl text-orange-300">▣</div>
+            <h3 class="mt-6 text-2xl font-bold text-white">Producción constante</h3>
+            <p class="mt-4 text-base leading-7 text-white/60">1 episodio semanal más múltiples clips para sostener presencia, frecuencia y crecimiento.</p>
+          </div>
+        </div>
+
+        <div class="mt-14 grid gap-5 md:grid-cols-2">
+          <div class="rounded-[2rem] border border-orange-500/20 bg-gradient-to-br from-orange-500/12 to-black p-8">
+            <p class="text-sm uppercase tracking-[0.25em] text-orange-300">Comunidad</p>
+            <p class="mt-3 text-5xl font-black text-white">+55,000</p>
+            <p class="mt-3 text-base text-white/65">seguidores en crecimiento dentro de un entorno multiplataforma.</p>
+          </div>
+          <div class="rounded-[2rem] border border-white/10 bg-black/50 p-8">
+            <p class="text-sm uppercase tracking-[0.25em] text-white/45">Visualizaciones</p>
+            <p class="mt-3 text-5xl font-black text-white">+15M</p>
+            <p class="mt-3 text-base text-white/65">impactos generados a través de episodios y clips con potencial viral.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REDES -->
+    <section id="redes" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+      <div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.05] to-white/[0.02] p-8 sm:p-10 lg:p-14">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Redes sociales</p>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
+            Una audiencia activa que consume contenido largo y clips virales.
+          </h2>
+        </div>
+
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="#" class="flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-black/40 px-6 py-5 transition hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div>
+              <p class="text-2xl text-orange-300">▶</p>
+              <p class="mt-3 text-lg font-semibold text-white">YouTube</p>
+            </div>
+            <span class="text-white/35">↗</span>
+          </a>
+
+          <a href="#" class="flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-black/40 px-6 py-5 transition hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div>
+              <p class="text-2xl text-orange-300">◎</p>
+              <p class="mt-3 text-lg font-semibold text-white">Instagram</p>
+            </div>
+            <span class="text-white/35">↗</span>
+          </a>
+
+          <a href="#" class="flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-black/40 px-6 py-5 transition hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div>
+              <p class="text-2xl text-orange-300">♫</p>
+              <p class="mt-3 text-lg font-semibold text-white">TikTok</p>
+            </div>
+            <span class="text-white/35">↗</span>
+          </a>
+
+          <a href="#" class="flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-black/40 px-6 py-5 transition hover:-translate-y-1 hover:border-orange-500/30 hover:bg-black/60">
+            <div>
+              <p class="text-2xl text-orange-300">◌</p>
+              <p class="mt-3 text-lg font-semibold text-white">Spotify</p>
+            </div>
+            <span class="text-white/35">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section id="sponsors" class="border-y border-white/8 bg-white/[0.02]">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[1fr_0.9fr] lg:px-8">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Para sponsors</p>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
+            Haz crecer tu marca con Santoria
+          </h2>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-white/72">
+            Colaboramos con marcas que quieren integrarse de forma natural en contenido real, generando confianza y visibilidad.
+          </p>
+          <div class="mt-10 grid gap-4">
+            <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">✓</span>
+              <p class="text-base text-white/75">Integración orgánica en el contenido</p>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">✓</span>
+              <p class="text-base text-white/75">Presencia en episodios y clips virales</p>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">✓</span>
+              <p class="text-base text-white/75">Alcance multiplataforma</p>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">✓</span>
+              <p class="text-base text-white/75">Audiencia fiel y activa</p>
+            </div>
+          </div>
+          <a
+            href="#contacto"
+            class="mt-10 inline-flex items-center justify-center rounded-full bg-orange-500 px-7 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-orange-400"
+          >
+            Quiero ser sponsor
+          </a>
+        </div>
+
+        <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-black/40">
+          <img
+            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
+            alt="Micrófono profesional y entorno premium de grabación"
+            class="h-full min-h-[420px] w-full object-cover opacity-85"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTUDIO -->
+    <section id="estudio" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+        <div class="order-2 overflow-hidden rounded-[2rem] border border-white/10 bg-black/40 lg:order-1">
+          <img
+            src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=1400&q=80"
+            alt="Estudio de podcast preparado para entrevistas y grabaciones profesionales"
+            class="h-full min-h-[420px] w-full object-cover opacity-85"
+          />
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Alquiler de estudio</p>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
+            Graba tu propio contenido profesional
+          </h2>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-white/72">
+            Ofrecemos un estudio totalmente equipado para creadores, empresas y proyectos que buscan calidad profesional.
+          </p>
+          <div class="mt-10 grid gap-4">
+            <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">✓</span>
+              <p class="text-base text-white/75">Equipamiento profesional</p>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">✓</span>
+              <p class="text-base text-white/75">Ambiente preparado para podcast y entrevistas</p>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">✓</span>
+              <p class="text-base text-white/75">Producción optimizada</p>
+            </div>
+          </div>
+          <a
+            href="#contacto"
+            class="mt-10 inline-flex items-center justify-center rounded-full border border-orange-500/40 bg-orange-500/10 px-7 py-4 text-base font-semibold text-orange-200 transition hover:-translate-y-0.5 hover:border-orange-400 hover:bg-orange-500/20"
+          >
+            Reservar estudio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="relative overflow-hidden border-t border-white/8 bg-[linear-gradient(180deg,rgba(249,115,22,0.07),rgba(9,9,9,1)_45%)]">
+      <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="mx-auto max-w-4xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Contacto</p>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-white sm:text-6xl">
+            ¿Listo para colaborar o crear contenido con nosotros?
+          </h2>
+          <p class="mt-6 text-base text-white/60">
+            O escríbenos directamente a
+            <a href="mailto:management@santoriastudios.com" class="ml-1 text-orange-400 hover:underline">
+              management@santoriastudios.com
+            </a>
+          </p>
+        </div>
+
+        <div class="mx-auto mt-14 max-w-3xl rounded-[2rem] border border-white/10 bg-black/50 p-6 shadow-2xl backdrop-blur-xl sm:p-8">
+          <!-- Formulario estático compatible con GitHub Pages usando FormSubmit -->
+          <form
+            action="https://formsubmit.co/management@santoriastudios.com"
+            method="POST"
+            class="grid gap-5"
+          >
+            <input type="hidden" name="_subject" value="Nuevo contacto desde Santoria Podcast" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <div class="grid gap-5 md:grid-cols-2">
+              <div>
+                <label for="nombre" class="mb-2 block text-sm font-medium text-white/70">Nombre</label>
+                <input
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  placeholder="Tu nombre"
+                  required
+                  class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none transition placeholder:text-white/30 focus:border-orange-500/50 focus:bg-white/10"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="mb-2 block text-sm font-medium text-white/70">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="tu@email.com"
+                  required
+                  class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none transition placeholder:text-white/30 focus:border-orange-500/50 focus:bg-white/10"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="tipo" class="mb-2 block text-sm font-medium text-white/70">Tipo de interés</label>
+              <select
+                id="tipo"
+                name="tipo_interes"
+                required
+                class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none transition focus:border-orange-500/50 focus:bg-white/10"
+              >
+                <option value="" disabled selected class="bg-[#111] text-white/50">Selecciona una opción</option>
+                <option value="Sponsor" class="bg-[#111]">Sponsor</option>
+                <option value="Alquiler estudio" class="bg-[#111]">Alquiler estudio</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="mensaje" class="mb-2 block text-sm font-medium text-white/70">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                placeholder="Cuéntanos qué necesitas"
+                required
+                class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none transition placeholder:text-white/30 focus:border-orange-500/50 focus:bg-white/10"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="mt-2 inline-flex items-center justify-center rounded-full bg-orange-500 px-7 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-orange-400"
+            >
+              Contactar
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
